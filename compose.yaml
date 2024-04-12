@@ -1,0 +1,13 @@
+# create docker compose file for my nodejs server application
+
+version: '3.7'
+
+services:
+  server:
+    build: .
+    container_name: server
+    restart: always
+    ports:
+      - 3000:80
+    volumes:
+      - ./:/app
