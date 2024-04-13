@@ -1,11 +1,10 @@
 import express from "express";
-import path from "path";
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
+import * as path from "path";
+const __filename = import.meta.url;
+const __dirname = path.dirname(new URL(__filename).pathname);
 
 const app = express()
 const PORT = process.env.PORT || 3000
-
 
 app.use(express.static(path.join(__dirname, 'assets')))
 
